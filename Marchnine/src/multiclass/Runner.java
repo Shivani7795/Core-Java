@@ -596,6 +596,96 @@ public class Runner {
         stem.support();
         System.out.println();
 
+        Bike bike = new Bike();
+        Bike bike1 = new Pedal();
+        bike1.move();
+        System.out.println();
+        Pedal pedal = new Pedal();
+        pedal.move();
+        pedal.rotate();
+        System.out.println();
+
+        Butterfly butterfly = new Butterfly();
+        Butterfly butterfly1 = new Caterpillar();
+        butterfly1.fly();
+        System.out.println();
+        Caterpillar caterpillar = new Caterpillar();
+        caterpillar.fly();
+        caterpillar.crawl();
+        System.out.println();
+
+        Ship ship = new Ship();
+        Ship ship1 = new Anchor();
+        ship1.sail();
+        System.out.println();
+        Anchor anchor = new Anchor();
+        anchor.sail();
+        anchor.stabilize();
+        System.out.println();
+
+        Hospital hospital = new Hospital();
+        Hospital hospital1 = new Doctor();
+        hospital1.serve();
+        System.out.println();
+        Doctor doctor = new Doctor();
+        doctor.serve();
+        doctor.treat();
+        System.out.println();
+
+        Market market = new Market();
+        Market market1 = new Vendor();
+        market1.sell();
+        System.out.println();
+        Vendor vendor = new Vendor();
+        vendor.sell();
+        vendor.bargain();
+        System.out.println();
+
+        Train train = new Train();
+        Train train1 = new Compartment();
+        train1.run();
+        System.out.println();
+        Compartment compartment = new Compartment();
+        compartment.run();
+        compartment.carry();
+        System.out.println();
+
+        Cupboard cupboard = new Cupboard();
+        Cupboard cupboard1 = new Shelf();
+        cupboard1.store();
+        System.out.println();
+        Shelf shelf = new Shelf();
+        shelf.store();
+        shelf.organize();
+        System.out.println();
+
+        Pencil pencil = new Pencil();
+        Pencil pencil1 = new Eraser();
+        pencil1.write();
+        System.out.println();
+        Eraser eraser = new Eraser();
+        eraser.write();
+        eraser.erase();
+        System.out.println();
+
+        Ring ring = new Ring();
+        Ring ring1 = new Diamond();
+        ring1.adorn();
+        System.out.println();
+        Diamond diamond = new Diamond();
+        diamond.adorn();
+        diamond.sparkle();
+        System.out.println();
+
+        Carpet carpet = new Carpet();
+        Carpet carpet1 = new Thread();
+        carpet1.cover();
+        System.out.println();
+        Thread thread = new Thread();
+        thread.cover();
+        thread.weave();
+        System.out.println();
+
 
 
 
