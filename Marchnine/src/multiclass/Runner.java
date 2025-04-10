@@ -416,6 +416,186 @@ public class Runner {
         pushup.strengthen();
         System.out.println();
 
+        Tree tree = new Tree();
+        Tree tree1 = new Leaf();
+        tree1.grow();
+        System.out.println();
+        Leaf leaf = new Leaf();
+        leaf.grow();
+        leaf.photosynthesize();
+        System.out.println();
+
+        Fruit fruit = new Fruit();
+        Fruit fruit1 = new Apple();
+        fruit1.taste();
+        System.out.println();
+        Apple apple = new Apple();
+        apple.taste();
+        apple.crunch();
+        System.out.println();
+
+        Sky sky = new Sky();
+        Sky sky1 = new Cloud();
+        sky1.shine();
+        System.out.println();
+        Cloud cloud = new Cloud();
+        cloud.shine();
+        cloud.rain();
+        System.out.println();
+
+        Laptop laptop = new Laptop();
+        Laptop laptop1 = new Keyboard();
+        laptop1.compute();
+        System.out.println();
+        Keyboard keyboard = new Keyboard();
+        keyboard.compute();
+        keyboard.type();
+        System.out.println();
+
+        Pen pen = new Pen();
+        Pen pen1 = new Ink();
+        pen1.write();
+        System.out.println();
+        Ink ink = new Ink();
+        ink.write();
+        ink.refill();
+        System.out.println();
+
+        Desk desk = new Desk();
+        Desk desk1 = new Drawer();
+        desk1.organize();
+        System.out.println();
+        Drawer drawer = new Drawer();
+        drawer.organize();
+        drawer.store();
+        System.out.println();
+
+        Mountain mountain = new Mountain();
+        Mountain mountain1 = new Peak();
+        mountain1.standTall();
+        System.out.println();
+        Peak peak = new Peak();
+        peak.standTall();
+        peak.reach();
+        System.out.println();
+
+        Ocean ocean = new Ocean();
+        Ocean ocean1 = new Wave();
+        ocean1.move();
+        System.out.println();
+        Wave wave = new Wave();
+        wave.move();
+        wave.crash();
+        System.out.println();
+
+        Clock clock = new Clock();
+        Clock clock1 = new Hand();
+        clock1.tick();
+        System.out.println();
+        Hand hand = new Hand();
+        hand.tick();
+        hand.point();
+        System.out.println();
+
+        Road road = new Road();
+        Road road1 = new Path();
+        road1.connect();
+        System.out.println();
+        Path path = new Path();
+        path.connect();
+        path.lead();
+        System.out.println();
+
+        Bridge bridge = new Bridge();
+        Bridge bridge1 = new Pillar();
+        bridge1.support();
+        System.out.println();
+        Pillar pillar = new Pillar();
+        pillar.support();
+        pillar.strengthen();
+        System.out.println();
+
+        School school = new School();
+        School school1 = new Classroom();
+        school1.educate();
+        System.out.println();
+        Classroom classroom = new Classroom();
+        classroom.educate();
+        classroom.teach();
+        System.out.println();
+
+        Camera camera = new Camera();
+        Camera camera1 = new Lens();
+        camera1.capture();
+        System.out.println();
+        Lens lens = new Lens();
+        lens.capture();
+        lens.zoom();
+        System.out.println();
+
+        Bird bird = new Bird();
+        Bird bird1 = new Sparrow();
+        bird1.fly();
+        System.out.println();
+        Sparrow sparrow = new Sparrow();
+        sparrow.fly();
+        sparrow.chirp();
+        System.out.println();
+
+        Lake lake = new Lake();
+        Lake lake1 = new Fish();
+        lake1.provide();
+        System.out.println();
+        Fish fish = new Fish();
+        fish.provide();
+        fish.swim();
+        System.out.println();
+
+        Star star = new Star();
+        Star star1 = new Galaxy();
+        star1.shine();
+        System.out.println();
+        Galaxy galaxy = new Galaxy();
+        galaxy.shine();
+        galaxy.expand();
+        System.out.println();
+
+        Rain rain = new Rain();
+        Rain rain1 = new Umbrella();
+        rain1.pour();
+        System.out.println();
+        Umbrella umbrella = new Umbrella();
+        umbrella.pour();
+        umbrella.shelter();
+        System.out.println();
+
+        Engine engine = new Engine();
+        Engine engine1 = new Piston();
+        engine1.run();
+        System.out.println();
+        Piston piston = new Piston();
+        piston.run();
+        piston.move();
+        System.out.println();
+
+        Ice ice = new Ice();
+        Ice ice1 = new Cube();
+        ice1.freeze();
+        System.out.println();
+        Cube cube = new Cube();
+        cube.freeze();
+        cube.melt();
+        System.out.println();
+
+        Plant plant = new Plant();
+        Plant plant1 = new Stem();
+        plant1.grow();
+        System.out.println();
+        Stem stem = new Stem();
+        stem.grow();
+        stem.support();
+        System.out.println();
+
 
 
 
