@@ -26,13 +26,11 @@ public class Runner {
         Actor actor = new Actor();
         System.out.println();
 
-        // Revolver hierarchy
         Tool tool = new Revolver();
         Weapon weapon = new Revolver();
         Revolver revolver = new Revolver();
         System.out.println();
 
-        // Sneaker hierarchy
         Accessory accessory = new Sneaker();
         Shoe shoe = new Sneaker();
         Sneaker sneaker = new Sneaker();
