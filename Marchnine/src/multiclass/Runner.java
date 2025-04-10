@@ -182,6 +182,246 @@ public class Runner {
         square.stack();
         System.out.println();
 
+        Cup cup = new Cup();
+        Cup cup1 = new Tea();
+        cup1.fill();
+        System.out.println();
+        Tea tea = new Tea();
+        tea.fill();
+        tea.brew();
+        System.out.println();
+
+        Flower flower = new Flower();
+        Flower flower1 = new Lotus();
+        flower1.bloom();
+        System.out.println();
+        Lotus lotus = new Lotus();
+        lotus.bloom();
+        lotus.floatOnWater();
+        System.out.println();
+
+        Face face = new Face();
+        Face face1 = new Eye();
+        face1.express();
+        System.out.println();
+        Eye eye = new Eye();
+        eye.express();
+        eye.blink();
+        System.out.println();
+
+        Snack snack = new Snack();
+        Snack snack1 = new Pizza();
+        snack1.eat();
+        System.out.println();
+        Pizza pizza = new Pizza();
+        pizza.eat();
+        pizza.slice();
+        System.out.println();
+
+        Colour colour = new Colour();
+        Colour colour1 = new Pink();
+        colour1.paint();
+        System.out.println();
+        Pink pink = new Pink();
+        pink.paint();
+        pink.shade();
+        System.out.println();
+
+        Food food = new Food();
+        Food food1 = new Dosa();
+        food1.prepare();
+        System.out.println();
+        Dosa dosa = new Dosa();
+        dosa.prepare();
+        dosa.serve();
+        System.out.println();
+
+        House house = new House();
+        House house1 = new Rent();
+        house1.build();
+        System.out.println();
+        Rent rent = new Rent();
+        rent.build();
+        rent.lease();
+        System.out.println();
+
+        Vehicle vehicle = new Vehicle();
+        Vehicle vehicle1 = new Car();
+        vehicle1.drive();
+        System.out.println();
+        Car car = new Car();
+        car.drive();
+        car.honk();
+        System.out.println();
+
+        Electric electric = new Electric();
+        Electric electric1 = new Iron();
+        electric1.powerOn();
+        System.out.println();
+        Iron iron = new Iron();
+        iron.powerOn();
+        iron.press();
+        System.out.println();
+
+        Sofa sofa = new Sofa();
+        Sofa sofa1 = new Cushion();
+        sofa1.relax();
+        System.out.println();
+        Cushion cushion = new Cushion();
+        cushion.relax();
+        cushion.fluff();
+        System.out.println();
+
+        Cricket cricket = new Cricket();
+        Cricket cricket1 = new Bat();
+        cricket1.play();
+        System.out.println();
+        Bat bat = new Bat();
+        bat.play();
+        bat.hit();
+        System.out.println();
+
+        Game game = new Game();
+        Game game1 = new Football();
+        game1.compete();
+        System.out.println();
+        Football football = new Football();
+        football.compete();
+        football.kick();
+        System.out.println();
+
+        Medicine medicine = new Medicine();
+        Medicine medicine1 = new Tablet();
+        medicine1.heal();
+        System.out.println();
+        Tablet tablet = new Tablet();
+        tablet.heal();
+        tablet.dissolve();
+        System.out.println();
+
+        Dress dress = new Dress();
+        Dress dress1 = new Lehenga();
+        dress1.wear();
+        System.out.println();
+        Lehenga lehenga = new Lehenga();
+        lehenga.wear();
+        lehenga.twirl();
+        System.out.println();
+
+        Kingdom kingdom = new Kingdom();
+        Kingdom kingdom1 = new King();
+        kingdom1.rule();
+        System.out.println();
+        King king = new King();
+        king.rule();
+        king.crown();
+        System.out.println();
+
+        Army army = new Army();
+        Army army1 = new Soldier();
+        army1.defend();
+        System.out.println();
+        Soldier soldier = new Soldier();
+        soldier.defend();
+        soldier.attack();
+        System.out.println();
+
+        Paint paint = new Paint();
+        Paint paint1 = new Brush();
+        paint1.color();
+        System.out.println();
+        Brush brush = new Brush();
+        brush.color();
+        brush.stroke();
+        System.out.println();
+
+        Toothpaste toothpaste = new Toothpaste();
+        Toothpaste toothpaste1 = new Teeth();
+        toothpaste1.clean();
+        System.out.println();
+        Teeth teeth = new Teeth();
+        teeth.clean();
+        teeth.shine();
+        System.out.println();
+
+        Jewellery jewellery = new Jewellery();
+        Jewellery jewellery1 = new Tanishq();
+        jewellery1.sparkle();
+        System.out.println();
+        Tanishq tanishq = new Tanishq();
+        tanishq.sparkle();
+        tanishq.brand();
+        System.out.println();
+
+        Malabar malabar = new Malabar();
+        Malabar malabar1 = new Gold();
+        malabar1.trade();
+        System.out.println();
+        Gold gold = new Gold();
+        gold.trade();
+        gold.purity();
+        System.out.println();
+
+        Elements elements = new Elements();
+        Elements elements1 = new Carbon();
+        elements1.bond();
+        System.out.println();
+        Carbon carbon = new Carbon();
+        carbon.bond();
+        carbon.compound();
+        System.out.println();
+
+        Lipstick lipstick = new Lipstick();
+        Lipstick lipstick1 = new Lips();
+        lipstick1.colorLips();
+        System.out.println();
+        Lips lips = new Lips();
+        lips.colorLips();
+        lips.smile();
+        System.out.println();
+
+        Hairstyle hairstyle = new Hairstyle();
+        Hairstyle hairstyle1 = new Hair();
+        hairstyle1.style();
+        System.out.println();
+        Hair hair = new Hair();
+        hair.style();
+        hair.comb();
+        System.out.println();
+
+        Animal animal = new Animal();
+        Animal animal1 = new Tiger();
+        animal1.roam();
+        System.out.println();
+        Tiger tiger = new Tiger();
+        tiger.roam();
+        tiger.hunt();
+        System.out.println();
+
+        Weather weather = new Weather();
+        Weather weather1 = new Rainy();
+        weather1.forecast();
+        System.out.println();
+        Rainy rainy = new Rainy();
+        rainy.forecast();
+        rainy.pour();
+        System.out.println();
+
+        Gym gym = new Gym();
+        Gym gym1 = new Pushup();
+        gym1.workout();
+        System.out.println();
+        Pushup pushup = new Pushup();
+        pushup.workout();
+        pushup.strengthen();
+        System.out.println();
+
+
+
+
+
+
+
 
     }
 }

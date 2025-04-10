@@ -8,3 +8,4 @@ class Bracelete {
         System.out.println("invoking thread in superclass");
     }
 }
+
