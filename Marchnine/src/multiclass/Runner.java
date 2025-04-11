@@ -686,12 +686,184 @@ public class Runner {
         thread.weave();
         System.out.println();
 
+        Field field = new Field();
+        Field field1 = new Crop();
+        field1.cultivate();
+        System.out.println();
+        Crop crop = new Crop();
+        crop.cultivate();
+        crop.harvest();
+        System.out.println();
 
+        Sun sun = new Sun();
+        Sun sun1 = new Beam();
+        sun1.shine();
+        System.out.println();
+        Beam beam = new Beam();
+        beam.shine();
+        beam.illuminate();
+        System.out.println();
 
+        Hill hill = new Hill();
+        Hill hill1 = new Rock();
+        hill1.elevate();
+        System.out.println();
+        Rock rock = new Rock();
+        rock.elevate();
+        rock.standFirm();
+        System.out.println();
 
+        Stage stage = new Stage();
+        Stage stage1 = new Performer();
+        stage1.present();
+        System.out.println();
+        Performer performer = new Performer();
+        performer.present();
+        performer.act();
+        System.out.println();
 
+        Suitcase suitcase = new Suitcase();
+        Suitcase suitcase1 = new Luggage();
+        suitcase1.carry();
+        System.out.println();
+        Luggage luggage = new Luggage();
+        luggage.carry();
+        luggage.pack();
+        System.out.println();
 
+        Kitchen kitchen = new Kitchen();
+        Kitchen kitchen1 = new Stove();
+        kitchen1.cook();
+        System.out.println();
+        Stove stove = new Stove();
+        stove.cook();
+        stove.heat();
+        System.out.println();
 
+        Folder folder = new Folder();
+        Folder folder1 = new File();
+        folder1.store();
+        System.out.println();
+        File file = new File();
+        file.store();
+        file.edit();
+        System.out.println();
 
+        Canvas canvas = new Canvas();
+        Canvas canvas1 = new Painting();
+        canvas1.display();
+        System.out.println();
+        Painting painting = new Painting();
+        painting.display();
+        painting.create();
+        System.out.println();
+
+        Movie movie = new Movie();
+        Movie movie1 = new Screen();
+        movie1.entertain();
+        System.out.println();
+        Screen screen = new Screen();
+        screen.entertain();
+        screen.display();
+        System.out.println();
+
+        City city = new City();
+        City city1 = new Street();
+        city1.grow();
+        System.out.println();
+        Street street = new Street();
+        street.grow();
+        street.connect();
+        System.out.println();
+
+        Beach beach = new Beach();
+        Beach beach1 = new Sand();
+        beach1.relax();
+        System.out.println();
+        Sand sand = new Sand();
+        sand.relax();
+        sand.scatter();
+        System.out.println();
+
+        Park park = new Park();
+        Park park1 = new Bench();
+        park1.relax();
+        System.out.println();
+        Bench bench = new Bench();
+        bench.relax();
+        bench.support();
+        System.out.println();
+
+        Fire fire = new Fire();
+        Fire fire1 = new Flame();
+        fire1.ignite();
+        System.out.println();
+        Flame flame = new Flame();
+        flame.ignite();
+        flame.burn();
+        System.out.println();
+
+        Skyline skyline = new Skyline();
+        Skyline skyline1 = new Building();
+        skyline1.rise();
+        System.out.println();
+        Building building = new Building();
+        building.rise();
+        building.tower();
+        System.out.println();
+
+        Plate plate = new Plate();
+        Plate plate1 = new Utensil();
+        plate1.holdFood();
+        System.out.println();
+        Utensil utensil = new Utensil();
+        utensil.holdFood();
+        utensil.serve();
+        System.out.println();
+
+        Roof roof = new Roof();
+        Roof roof1 = new Tile();
+        roof1.protect();
+        System.out.println();
+        Tile tile = new Tile();
+        tile.protect();
+        tile.insulate();
+        System.out.println();
+
+        Garden garden = new Garden();
+        Garden garden1 = new Fence();
+        garden1.nurture();
+        System.out.println();
+        Fence fence = new Fence();
+        fence.nurture();
+        fence.protect();
+        System.out.println();
+
+        Village village = new Village();
+        Village village1 = new Hut();
+        village1.exist();
+        System.out.println();
+        Hut hut = new Hut();
+        hut.exist();
+        hut.shelter();
+        System.out.println();
+
+        Candle candle = new Candle();
+        Candle candle1 = new Wick();
+        candle1.lightUp();
+        System.out.println();
+        Wick wick = new Wick();
+        wick.lightUp();
+        wick.burn();
+        System.out.println();
+
+        Pond pond = new Pond();
+        Pond pond1 = new Lily();
+        pond1.reflect();
+        System.out.println();
+        Lily lily = new Lily();
+        lily.reflect();
+        lily.bloom();
+        System.out.println();
     }
 }
