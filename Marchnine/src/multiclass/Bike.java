@@ -1,6 +1,6 @@
 package multiclass;
 
-class Bike {
+public class Bike {
     public Bike() {
         System.out.println("invoking Bike");
     }

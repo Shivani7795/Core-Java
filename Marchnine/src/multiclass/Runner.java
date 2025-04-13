@@ -865,5 +865,15 @@ public class Runner {
         lily.reflect();
         lily.bloom();
         System.out.println();
+
+        Album album = new Album();
+        Album album1 = new Photo();
+        album1.size();
+        System.out.println();
+        Photo photo = new Photo();
+        photo.size();
+        photo.edit();
+        System.out.println();
+
     }
 }

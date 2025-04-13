@@ -12,4 +12,17 @@ class Pedal extends Bike {
     public void rotate() {
         System.out.println("invoking rotate");
     }
+    public void cBike(Bike bike) {
+        if (bike != null) {
+            bike.move();//???
+            if (bike instanceof Pedal) {
+                Pedal pedal = (Pedal) bike;//casting
+                pedal.rotate();
+            } else {
+                System.err.println("Pedal is not in Bike");
+            }
+        } else {
+            System.err.println("Bike is null..");
+        }
+    }
 }
