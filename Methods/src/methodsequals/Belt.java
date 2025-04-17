@@ -1,13 +1,13 @@
-package methods;
+package methodsequals;
 import java.util.Objects;
 
-public class Carpet {
+public class Belt {
     private String material;
     private String size;
     private String color;
     private int price;
 
-    public Carpet(String material, String size, String color, int price) {
+    public Belt(String material, String size, String color, int price) {
         this.material = material;
         this.size = size;
         this.color = color;
@@ -16,7 +16,7 @@ public class Carpet {
 
     @Override
     public String toString() {
-        return "Carpet{" +
+        return "Belt{" +
                 "material='" + material +
                 ", size='" + size +
                 ", color='" + color +
@@ -26,13 +26,13 @@ public class Carpet {
 
     @Override
     public boolean equals(Object obj) {
-        if (obj != null && obj instanceof Carpet) {
-            Carpet carpet = (Carpet) obj;
-            if (Objects.equals(this.material, carpet.material) &&
-                    Objects.equals(this.size, carpet.size) &&
-                    Objects.equals(this.color, carpet.color) &&
-                    Objects.equals(this.price, carpet.price)) {
-                System.out.println("Carpet is matching...");
+        if (obj != null && obj instanceof Belt) {
+            Belt belt = (Belt) obj;
+            if (Objects.equals(this.material, belt.material) &&
+                    Objects.equals(this.size, belt.size) &&
+                    Objects.equals(this.color, belt.color) &&
+                    Objects.equals(this.price, belt.price)) {
+                System.out.println("Belt is matching...");
                 return true;
             }
         }

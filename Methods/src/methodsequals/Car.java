@@ -1,4 +1,4 @@
-package methods;
+package methodsequals;
 import java.util.Objects;
 
 public class Car {
