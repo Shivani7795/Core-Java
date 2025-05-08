@@ -226,10 +226,10 @@ public class Casting {
     }
     public void crawlButterfly(Butterfly butterfly) {
         if (butterfly != null) {
-            butterfly.fly(); // Method from Butterfly class
+            butterfly.fly();
             if (butterfly instanceof Caterpillar) {
-                Caterpillar caterpillar = (Caterpillar) butterfly; // Casting
-                caterpillar.crawl(); // Specific method for Caterpillar
+                Caterpillar caterpillar = (Caterpillar) butterfly;
+                caterpillar.crawl();
             } else {
                 System.err.println("Butterfly is not of type Caterpillar");
             }
@@ -239,10 +239,10 @@ public class Casting {
     }
     public void broadcastTV(TV tv) {
         if (tv != null) {
-            tv.watch(); // Method from TV class
+            tv.watch();
             if (tv instanceof Channel) {
-                Channel channel = (Channel) tv; // Casting
-                channel.broadcast(); // Specific method for Channel
+                Channel channel = (Channel) tv;
+                channel.broadcast();
             } else {
                 System.err.println("TV is not of type Channel");
             }
@@ -252,10 +252,10 @@ public class Casting {
     }
     public void teachSchool(School school) {
         if (school != null) {
-            school.educate(); // Method from School class
+            school.educate();
             if (school instanceof Classroom) {
-                Classroom classroom = (Classroom) school; // Casting
-                classroom.teach(); // Specific method for Classroom
+                Classroom classroom = (Classroom) school;
+                classroom.teach();
             } else {
                 System.err.println("School is not of type Classroom");
             }
@@ -265,10 +265,10 @@ public class Casting {
     }
     public void rainSky(Sky sky) {
         if (sky != null) {
-            sky.shine(); // Method from Sky class
+            sky.shine();
             if (sky instanceof Cloud) {
-                Cloud cloud = (Cloud) sky; // Casting
-                cloud.rain(); // Specific method for Cloud
+                Cloud cloud = (Cloud) sky;
+                cloud.rain();
             } else {
                 System.err.println("Sky is not of type Cloud");
             }
@@ -278,10 +278,10 @@ public class Casting {
     }
     public void carryTrain(Train train) {
         if (train != null) {
-            train.run(); // Method from Train class
+            train.run();
             if (train instanceof Compartment) {
-                Compartment compartment = (Compartment) train; // Casting
-                compartment.carry(); // Specific method for Compartment
+                Compartment compartment = (Compartment) train;
+                compartment.carry();
             } else {
                 System.err.println("Train is not of type Compartment");
             }
@@ -291,10 +291,10 @@ public class Casting {
     }
     public void cottonyPillow(Pillow pillow) {
         if (pillow != null) {
-            pillow.square(); // Method from Pillow class
+            pillow.square();
             if (pillow instanceof Cotton) {
-                Cotton cotton = (Cotton) pillow; // Casting
-                cotton.Cottony(); // Specific method for Cotton
+                Cotton cotton = (Cotton) pillow;
+                cotton.Cottony();
             } else {
                 System.err.println("Pillow is not of type Cotton");
             }
@@ -304,10 +304,10 @@ public class Casting {
     }
     public void harvestField(Field field) {
         if (field != null) {
-            field.cultivate(); // Method from Field class
+            field.cultivate();
             if (field instanceof Crop) {
-                Crop crop = (Crop) field; // Casting
-                crop.harvest(); // Specific method for Crop
+                Crop crop = (Crop) field;
+                crop.harvest();
             } else {
                 System.err.println("Field is not of type Crop");
             }
@@ -316,10 +316,10 @@ public class Casting {
         }
     }public void meltIce(Ice ice) {
         if (ice != null) {
-            ice.freeze(); // Method from Ice class
+            ice.freeze();
             if (ice instanceof Cube) {
-                Cube cube = (Cube) ice; // Casting
-                cube.melt(); // Specific method for Cube
+                Cube cube = (Cube) ice;
+                cube.melt();
             } else {
                 System.err.println("Ice is not of type Cube");
             }
@@ -329,10 +329,10 @@ public class Casting {
     }
     public void frostCake(Cake cake) {
         if (cake != null) {
-            cake.bakeCake(); // Method from Cake class
+            cake.bakeCake();
             if (cake instanceof Cupcake) {
-                Cupcake cupcake = (Cupcake) cake; // Casting
-                cupcake.Frost(); // Specific method for Cupcake
+                Cupcake cupcake = (Cupcake) cake;
+                cupcake.Frost();
             } else {
                 System.err.println("Cake is not of type Cupcake");
             }
@@ -341,10 +341,10 @@ public class Casting {
         }
     }public void fluffSofa(Sofa sofa) {
         if (sofa != null) {
-            sofa.relax(); // Method from Sofa class
+            sofa.relax();
             if (sofa instanceof Cushion) {
-                Cushion cushion = (Cushion) sofa; // Casting
-                cushion.fluff(); // Specific method for Cushion
+                Cushion cushion = (Cushion) sofa;
+                cushion.fluff();
             } else {
                 System.err.println("Sofa is not of type Cushion");
             }
@@ -354,10 +354,10 @@ public class Casting {
     }
     public void sparkleRing(Ring ring) {
         if (ring != null) {
-            ring.adorn(); // Method from Ring class
+            ring.adorn();
             if (ring instanceof Diamond) {
-                Diamond diamond = (Diamond) ring; // Casting
-                diamond.sparkle(); // Specific method for Diamond
+                Diamond diamond = (Diamond) ring;
+                diamond.sparkle();
             } else {
                 System.err.println("Ring is not of type Diamond");
             }
@@ -367,10 +367,10 @@ public class Casting {
     }
     public void treatHospital(Hospital hospital) {
         if (hospital != null) {
-            hospital.serve(); // Method from Hospital class
+            hospital.serve();
             if (hospital instanceof Doctor) {
-                Doctor doctor = (Doctor) hospital; // Casting
-                doctor.treat(); // Specific method for Doctor
+                Doctor doctor = (Doctor) hospital;
+                doctor.treat();
             } else {
                 System.err.println("Hospital is not of type Doctor");
             }
@@ -380,10 +380,10 @@ public class Casting {
     }
     public void serveFood(Food food) {
         if (food != null) {
-            food.prepare(); // Method from Food class
+            food.prepare();
             if (food instanceof Dosa) {
-                Dosa dosa = (Dosa) food; // Casting
-                dosa.serve(); // Specific method for Dosa
+                Dosa dosa = (Dosa) food;
+                dosa.serve(); 
             } else {
                 System.err.println("Food is not of type Dosa");
             }
@@ -444,11 +444,164 @@ public class Casting {
         }
     }
 
+    public void protectPond(Pond pond) {
+            if (pond != null) {
+                pond.reflect();
+                if (pond instanceof Lily) {
+                    Lily lily = (Lily) pond;
+                    lily.bloom();
+                } else {
+                    System.err.println("Pond is not of type Lily");
+                }
+            } else {
+                System.err.println("Pond is null..");
+            }
+        }
 
+        public void protectCamera(Camera camera) {
+            if (camera != null) {
+                camera.capture();
+                if (camera instanceof Lens) {
+                    Lens lens = (Lens) camera;
+                    lens.zoom();
+                } else {
+                    System.err.println("Camera is not of type Lens");
+                }
+            } else {
+                System.err.println("Camera is null..");
+            }
+        }
 
+        public void protectDress(Dress dress) {
+            if (dress != null) {
+                dress.wear();
+                if (dress instanceof Lehenga) {
+                    Lehenga lehenga = (Lehenga) dress;
+                    lehenga.twirl();
+                } else {
+                    System.err.println("Dress is not of type Lehenga");
+                }
+            } else {
+                System.err.println("Dress is null..");
+            }
+        }
 
+        public void protectKingdom(Kingdom kingdom) {
+            if (kingdom != null) {
+                kingdom.rule();
+                if (kingdom instanceof King) {
+                    King king = (King) kingdom;
+                    king.crown();
+                } else {
+                    System.err.println("Kingdom is not of type King");
+                }
+            } else {
+                System.err.println("Kingdom is null..");
+            }
+        }
 
+        public void protectLaptop(Laptop laptop) {
+            if (laptop != null) {
+                laptop.compute();
+                if (laptop instanceof Keyboard) {
+                    Keyboard keyboard = (Keyboard) laptop;
+                    keyboard.type();
+                } else {
+                    System.err.println("Laptop is not of type Keyboard");
+                }
+            } else {
+                System.err.println("Laptop is null..");
+            }
+        }
 
+        public void protectElectric(Electric electric) {
+            if (electric != null) {
+                electric.powerOn();
+                if (electric instanceof Iron) {
+                    Iron iron = (Iron) electric;
+                    iron.press();
+                } else {
+                    System.err.println("Electric is not of type Iron");
+                }
+            } else {
+                System.err.println("Electric is null..");
+            }
+        }
 
+        public void protectPen(Pen pen) {
+            if (pen != null) {
+                pen.write();
+                if (pen instanceof Ink) {
+                    Ink ink = (Ink) pen;
+                    ink.refill();
+                } else {
+                    System.err.println("Pen is not of type Ink");
+                }
+            } else {
+                System.err.println("Pen is null..");
+            }
+        }
+
+        public void protectVillage(Village village) {
+            if (village != null) {
+                village.exist();
+                if (village instanceof Hut) {
+                    Hut hut = (Hut) village;
+                    hut.shelter();
+                } else {
+                    System.err.println("Village is not of type Hut");
+                }
+            } else {
+                System.err.println("Village is null..");
+            }
+        }
+
+        public void protectClock(Clock clock) {
+            if (clock != null) {
+                clock.tick();
+                if (clock instanceof Hand) {
+                    Hand hand = (Hand) clock;
+                    hand.point();
+                } else {
+                    System.err.println("Clock is not of type Hand");
+                }
+            } else {
+                System.err.println("Clock is null..");
+            }
+        }
+
+        public void protectHairstyle(Hairstyle hairstyle) {
+            if (hairstyle != null) {
+                hairstyle.style();
+                if (hairstyle instanceof Hair) {
+                    Hair hair = (Hair) hairstyle;
+                    hair.comb();
+                } else {
+                    System.err.println("Hairstyle is not of type Hair");
+                }
+            } else {
+                System.err.println("Hairstyle is null..");
+            }
+        }
+
+        public void protectMalabar(Malabar malabar) {
+            if (malabar != null) {
+                malabar.trade();
+                if (malabar instanceof Gold) {
+                    Gold gold = (Gold) malabar;
+                    gold.purity();
+                } else {
+                    System.err.println("Malabar is not of type Gold");
+                }
+            } else {
+                System.err.println("Malabar is null..");
+            }
+        }
 }
+
+
+
+
+
+
 
