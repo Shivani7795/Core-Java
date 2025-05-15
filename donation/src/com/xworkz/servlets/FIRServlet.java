@@ -23,8 +23,11 @@ public class FIRServlet extends GenericServlet {
         out.println("<p><strong>Address:</strong> " + address + "</p>");
         out.println("<p><strong>Date of Incident:</strong> " + incidentDate + "</p>");
 
+        System.out.println("using request dispatcher to forward the req and res to another jsp/servlet");
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("firresponse.jsp");
+
+
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("FIR.jsp");
         requestDispatcher.forward(request, response);
     }
 }

@@ -23,7 +23,11 @@ public class FeedBackServlet extends GenericServlet {
         out.println("<p><strong>Subject:</strong> " + subject + "</p>");
         out.println("<p><strong>Message:</strong><br>" + message + "</p>");
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("feedbackresponse.jsp");
+
+        System.out.println("using request dispatcher to forward the req and res to another jsp/servlet");
+
+
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("FeedBack.jsp");
         requestDispatcher.forward(request, response);
     }
 }

@@ -23,7 +23,11 @@ public class LaboratoryServlet extends GenericServlet {
         out.println("<p><strong>Lab Name:</strong> " + labName + "</p>");
         out.println("<p><strong>Purpose:</strong><br>" + purpose + "</p>");
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("laboratoryresponse.jsp");
+
+        System.out.println("using request dispatcher to forward the req and res to another jsp/servlet");
+
+
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher("Laboratory.jsp");
         requestDispatcher.forward(request, response);
     }
 }
