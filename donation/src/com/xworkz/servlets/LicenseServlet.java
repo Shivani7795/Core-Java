@@ -1,42 +1,33 @@
 package com.xworkz.servlets;
 
 import javax.servlet.*;
-        import javax.servlet.annotation.WebServlet;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @WebServlet(urlPatterns = "/license")
-public class LicenseServlet extends GenericServlet {
+public class LicenseServlet extends HttpServlet {
+    public LicenseServlet()
+    {
+        System.out.println("License Servlet constructor");
+    }
+
     @Override
-    public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
-        String applicantName = request.getParameter("applicantName");
-        String email = request.getParameter("email");
-        String licenseType = request.getParameter("licenseType");
-        String address = request.getParameter("address");
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("doPost method in License Servlet");
+        String applicantName = req.getParameter("applicantName");
+        String email = req.getParameter("email");
+        String licenseType = req.getParameter("licenseType");
+        String address = req.getParameter("address");
 
-        // Pass data to the JSP
-        request.setAttribute("applicantName", applicantName);
-        request.setAttribute("email", email);
-        request.setAttribute("licenseType", licenseType);
-        request.setAttribute("address", address);
+        RequestDispatcher requestDispatcher=req.getRequestDispatcher("LicenseSuccess.jsp");
+        req.setAttribute("applicantName",applicantName);
+        req.setAttribute("email",email);
+        req.setAttribute("licenseType",licenseType);
+        req.setAttribute("address",address);
+        requestDispatcher.forward(req,resp);
 
-        System.out.println("Using RequestDispatcher to forward the request to Licence.jsp");
-
-        // Forward to JSP (update the path if needed)
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("/License.jsp");
-        requestDispatcher.forward(request, response);
     }
 }
-
-/*<%@ page contentType="text/html;charset=UTF-8" %>
-<html>
-<head><title>License Confirmation</title></head>
-<body>
-    <h1>License Application Submitted</h1>
-    <p><strong>Name:</strong> ${applicantName}</p>
-    <p><strong>Email:</strong> ${email}</p>
-    <p><strong>License Type:</strong> ${licenseType}</p>
-    <p><strong>Address:</strong> ${address}</p>
-
-    <hr>
-</body>
-</html>*/

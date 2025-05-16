@@ -2,32 +2,32 @@ package com.xworkz.servlets;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebServlet(urlPatterns = "/feedback")
-public class FeedBackServlet extends GenericServlet {
+public class FeedBackServlet extends HttpServlet {
+    public FeedBackServlet()
+    {
+        System.out.println("FeedBackServlet Constructor");
+    }
     @Override
-    public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
-        String name = request.getParameter("name");
-        String email = request.getParameter("email");
-        String subject = request.getParameter("subject");
-        String message = request.getParameter("message");
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("doPost Method in Feedback Servlet");
 
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
+        String name = req.getParameter("name");
+        String email = req.getParameter("email");
+        String subject = req.getParameter("subject");
+        String message = req.getParameter("message");
 
-        out.println("<h1>Thank You for Your Feedback</h1>");
-        out.println("<p><strong>Name:</strong> " + name + "</p>");
-        out.println("<p><strong>Email:</strong> " + email + "</p>");
-        out.println("<p><strong>Subject:</strong> " + subject + "</p>");
-        out.println("<p><strong>Message:</strong><br>" + message + "</p>");
-
-
-        System.out.println("using request dispatcher to forward the req and res to another jsp/servlet");
-
-
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("FeedBack.jsp");
-        requestDispatcher.forward(request, response);
+        RequestDispatcher requestDispatcher=req.getRequestDispatcher("FeedbackSuccess.jsp");
+        req.setAttribute("name",name);
+        req.setAttribute("email",email);
+        req.setAttribute("subject",subject);
+        req.setAttribute("message",message);
+        requestDispatcher.forward(req,resp);
     }
 }
+

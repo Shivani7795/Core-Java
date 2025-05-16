@@ -2,32 +2,31 @@ package com.xworkz.servlets;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebServlet(urlPatterns = "/laboratory")
-public class LaboratoryServlet extends GenericServlet {
+public class LaboratoryServlet extends HttpServlet {
+    public LaboratoryServlet()
+    {
+        System.out.println("Laboratory servlet constructor");
+    }
+
     @Override
-    public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
-        String studentName = request.getParameter("studentName");
-        String rollNumber = request.getParameter("rollNumber");
-        String labName = request.getParameter("labName");
-        String purpose = request.getParameter("purpose");
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("doPost method in Laboratory servlet");
+        String studentName = req.getParameter("studentName");
+        String rollNumber = req.getParameter("rollNumber");
+        String labName = req.getParameter("labName");
+        String purpose = req.getParameter("purpose");
 
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-
-        out.println("<h1>Laboratory Request Submitted</h1>");
-        out.println("<p><strong>Student Name:</strong> " + studentName + "</p>");
-        out.println("<p><strong>Roll Number:</strong> " + rollNumber + "</p>");
-        out.println("<p><strong>Lab Name:</strong> " + labName + "</p>");
-        out.println("<p><strong>Purpose:</strong><br>" + purpose + "</p>");
-
-
-        System.out.println("using request dispatcher to forward the req and res to another jsp/servlet");
-
-
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("Laboratory.jsp");
-        requestDispatcher.forward(request, response);
+        RequestDispatcher requestDispatcher=req.getRequestDispatcher("LaboratorySuccess.jsp");
+        req.setAttribute("studentName",studentName);
+        req.setAttribute("rollNumber",rollNumber);
+        req.setAttribute("labName",labName);
+        req.setAttribute("purpose",purpose);
+        requestDispatcher.forward(req,resp);
     }
 }

@@ -1,33 +1,36 @@
 package com.xworkz.servlets;
 
 import javax.servlet.*;
-        import javax.servlet.annotation.WebServlet;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebServlet(urlPatterns = "/fir")
-public class FIRServlet extends GenericServlet {
+public class FIRServlet extends HttpServlet {
+    public FIRServlet()
+    {
+        System.out.println("FIR Servlet constructor");
+    }
+
     @Override
-    public void service(ServletRequest request, ServletResponse response) throws ServletException, IOException {
-        String complainantName = request.getParameter("complainantName");
-        String phone = request.getParameter("phone");
-        String address = request.getParameter("address");
-        String incidentDate = request.getParameter("incidentDate");
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("doPost method in FIR servlet");
 
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-
-        out.println("<h1>FIR Submitted Successfully</h1>");
-        out.println("<p><strong>Name:</strong> " + complainantName + "</p>");
-        out.println("<p><strong>Phone:</strong> " + phone + "</p>");
-        out.println("<p><strong>Address:</strong> " + address + "</p>");
-        out.println("<p><strong>Date of Incident:</strong> " + incidentDate + "</p>");
-
-        System.out.println("using request dispatcher to forward the req and res to another jsp/servlet");
+        String complainantName = req.getParameter("complainantName");
+        String phone = req.getParameter("phone");
+        String address = req.getParameter("address");
+        String incidentDate = req.getParameter("incidentDate");
 
 
 
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("FIR.jsp");
-        requestDispatcher.forward(request, response);
+        RequestDispatcher requestDispatcher=req.getRequestDispatcher("FIRSuccess.jsp");
+        req.setAttribute("complainantName",complainantName);
+        req.setAttribute("phone",phone);
+        req.setAttribute("address",address);
+        req.setAttribute("incidentDate",incidentDate);
+        requestDispatcher.forward(req,resp);
     }
 }
+

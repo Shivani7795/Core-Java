@@ -45,4 +45,21 @@
 
             <div class="mb-3">
                 <label for="message" class="form-label">Message:</label>
-                <textarea class="form-control" id="message" name="mess
+                <textarea class="form-control" id="message" name="message" placeholder="Enter the message" required></textarea>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+
+                 </div>
+        </form>
+    </div>
+</div>
+
+<footer class="text-center text-dark mt-5">
+                &copy; 2025 Lab Portal | Designed by Shivani A.
+                </footer>
+
+</body>
+</html>
+
