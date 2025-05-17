@@ -13,7 +13,6 @@ public class LaboratoryServlet extends HttpServlet {
     {
         System.out.println("Laboratory servlet constructor");
     }
-
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("doPost method in Laboratory servlet");
@@ -22,11 +21,21 @@ public class LaboratoryServlet extends HttpServlet {
         String labName = req.getParameter("labName");
         String purpose = req.getParameter("purpose");
 
+        LaboratoryDto dto = new LaboratoryDto();
+        dto.setStudentName(studentName);
+        dto.setRollNumber(rollNumber);
+        dto.setLabName(labName);
+        dto.setPurpose(purpose);
+
         RequestDispatcher requestDispatcher=req.getRequestDispatcher("LaboratorySuccess.jsp");
-        req.setAttribute("studentName",studentName);
-        req.setAttribute("rollNumber",rollNumber);
-        req.setAttribute("labName",labName);
-        req.setAttribute("purpose",purpose);
+        req.setAttribute("dto",dto);
         requestDispatcher.forward(req,resp);
+
+
+
+
+
+
+
     }
 }

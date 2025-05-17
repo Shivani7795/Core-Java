@@ -18,16 +18,20 @@ public class DonationServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         System.out.println("doPost method in DonationServlet");
-        String name = req.getParameter("Donar Name");
+        String name = req.getParameter("name");
+        String email = req.getParameter("email");
         String amount = req.getParameter("Amount");
         String cause = req.getParameter("cause");
-        String email = req.getParameter("email");
 
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("DonationSuccess.jsp");
-        req.setAttribute("Name",name);
-        req.setAttribute("amount",amount);
-        req.setAttribute("cause",cause);
-        req.setAttribute("email",email);
+
+        DonationDto dto = new DonationDto();
+        dto.setName(name);
+        dto.setEmail(email);
+        dto.setAmount(amount);
+        dto.setCause(cause);
+
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("donationSuccess.jsp");
+        req.setAttribute("dto",dto);
         requestDispatcher.forward(req, resp);
 
     }

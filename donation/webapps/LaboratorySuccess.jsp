@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -6,6 +5,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
 </head>
+
 <body>
 
 <nav class="navbar navbar-expand-lg" style="background-color: #90caf9;">
@@ -24,32 +24,31 @@
     </div>
 </nav>
         <h2 class="text-bold pe-3">Laboratory Details</h2>
-        <table class="table table-borderless w-20 mx-auto text-start">
-            <tbody>
-            <tr>
-                <td class="text-bold pe-3">studentName:</td>
-                <td>${studentName}</td>
-            </tr>
-            <tr>
-                <td class="text-bold pe-3">rollNumber:</td>
-                <td>${rollNumber}</td>
-            </tr>
-            <tr>
-                <td class="text-bold pe-3">Lab Name:</td>
-                <td>${labName}</td>
-            </tr>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Student Name</th>
+        <th scope="col">Roll Number</th>
+        <th scope="col">Lab Name</th>
+        <th scope="col">purpose</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">${dto.studentName}</th>
+        <td>${dto.rollNumber}</td>
+        <td>${dto.labName}</td>
+        <td>${dto.purpose}</td>
+    </tr>
 
-            <tr>
-                <td class="text-bold pe-3">purpose:</td>
-                <td>${purpose}</td>
-            </tr>
 
-            </tbody>
-        </table>
-
+    </tbody>
+</table>
         <p>
             Laboratory details are Saved Successfully.
         </p>
     </div>
 </div>
+</body>
+</html>
 

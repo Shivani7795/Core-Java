@@ -18,18 +18,21 @@ public class FIRServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         System.out.println("doPost method in FIR servlet");
 
+        String name = req.getParameter("name");
         String complainantName = req.getParameter("complainantName");
         String phone = req.getParameter("phone");
         String address = req.getParameter("address");
         String incidentDate = req.getParameter("incidentDate");
 
-
+        FIRDto dto = new FIRDto();
+        dto.setName(name);
+        dto.setComplaintName(complainantName);
+        dto.setPhone(phone);
+        dto.setAddress(address);
+        dto.setIncidentDate(incidentDate);
 
         RequestDispatcher requestDispatcher=req.getRequestDispatcher("FIRSuccess.jsp");
-        req.setAttribute("complainantName",complainantName);
-        req.setAttribute("phone",phone);
-        req.setAttribute("address",address);
-        req.setAttribute("incidentDate",incidentDate);
+        req.setAttribute("dto",dto);
         requestDispatcher.forward(req,resp);
     }
 }

@@ -28,8 +28,8 @@
     <div class="card card-custom p-4 mx-auto" style="max-width: 600px;">
         <form action="donation" method="post">
             <div class="mb-3">
-                <label for="firstName" class="form-label">Donar Name:</label>
-                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter donar Name" required>
+                <label for="firstName" class="form-label">Donor Name:</label>
+                <input type="text" class="form-control" id="firstName" name="name" placeholder="Enter donor Name" required>
             </div>
             <div class="mb-3">
                 <label for="email" class="form-label">Email:</label>

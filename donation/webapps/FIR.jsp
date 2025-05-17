@@ -31,11 +31,11 @@
 
             <div class="mb-3">
                  <label for="firstName" class="form-label">Name:</label>
-                 <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter donar Name" required>
+                 <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter Name" required>
             </div>
             <div class="mb-3">
-                <label for="complainantName" class="form-label">Complainant Name:</label>
-                <input type="text" class="form-control" id="complainantName" name="complainantName" placeholder="Enter your full name" required>
+                <label for="complainantName" class="form-label">Complaint Name:</label>
+                <input type="text" class="form-control" id="complainantName" name="complainantName" placeholder="Enter complaint" required>
             </div>
 
 

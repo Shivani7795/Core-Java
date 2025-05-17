@@ -23,29 +23,27 @@
     </div>
 </nav>
 
-<h2 class="text-success mb-3">License Details</h2>
-<table class="table table-borderless w-20 mx-auto text-start">
+<h2 class="text-bold pe-3">License Details</h2>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">applicantName</th>
+        <th scope="col">email</th>
+        <th scope="col">licenseType</th>
+        <th scope="col">address</th>
+    </tr>
+    </thead>
     <tbody>
     <tr>
-        <td class="text-bold pe-3">applicantName:</td>
-        <td>${applicantName}</td>
-    </tr>
-    <tr>
-        <td class="text-bold pe-3">email:</td>
-        <td>${email}</td>
-    </tr>
-    <tr>
-        <td class="text-bold pe-3">licenseType:</td>
-        <td>${licenseType}</td>
+        <th scope="row">${dto.applicantName}</th>
+        <td>${dto.email}</td>
+        <td>${dto.licenseType}</td>
+        <td>${dto.address}</td>
     </tr>
 
-    <tr>
-        <td class="text-bold pe-3">address:</td>
-        <td>${address}</td>
-    </tr>
 
-            </tbody>
-        </table>
+    </tbody>
+</table>
 <p class="fs-5">License Details are saved Successfully!!!.</p>
 </div>
 </div>

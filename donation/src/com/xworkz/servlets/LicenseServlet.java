@@ -22,11 +22,14 @@ public class LicenseServlet extends HttpServlet {
         String licenseType = req.getParameter("licenseType");
         String address = req.getParameter("address");
 
+        LicenseDto dto = new LicenseDto();
+        dto.setApplicantName(applicantName);
+        dto.setEmail(email);
+        dto.setLicenseType(licenseType);
+        dto.setAddress(address);
+
         RequestDispatcher requestDispatcher=req.getRequestDispatcher("LicenseSuccess.jsp");
-        req.setAttribute("applicantName",applicantName);
-        req.setAttribute("email",email);
-        req.setAttribute("licenseType",licenseType);
-        req.setAttribute("address",address);
+        req.setAttribute("dto",dto);
         requestDispatcher.forward(req,resp);
 
     }

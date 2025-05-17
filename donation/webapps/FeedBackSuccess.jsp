@@ -23,31 +23,31 @@
     </div>
 </nav>
 
-<h2 class="text-bold pe-3">Feedback Details</h2>
-<table class="table table-borderless w-20 mx-auto text-start">
+<h2 class="text-bold pe-3">FeedBack Details</h2>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col"> Name</th>
+        <th scope="col">email</th>
+        <th scope="col">subject</th>
+        <th scope="col">message</th>
+    </tr>
+    </thead>
     <tbody>
     <tr>
-        <td class="text-bold pe-3">name:</td>
-        <td>${name}</td>
-    </tr>
-    <tr>
-        <td class="text-bold pe-3">email:</td>
-        <td>${email}</td>
-    </tr>
-    <tr>
-        <td class="text-bold pe-3">subject:</td>
-        <td>${subject}</td>
+        <th scope="row">${dto.name}</th>
+        <td>${dto.email}</td>
+        <td>${dto.subject}</td>
+        <td>${dto.message}</td>
     </tr>
 
-    <tr>
-        <td class="text-bold pe-3">message:</td>
-        <td>${message}</td>
-    </tr>
-            </tbody>
-        </table>
-        <p class="fs-5">FeedBack Details are saved Successfully!!!.</p>
-    </div>
+
+    </tbody>
+</table>
+<p>
+    FeedBack details are Saved Successfully.
+</p>
 </div>
-
+</div>
 </body>
 </html>
