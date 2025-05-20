@@ -22,6 +22,7 @@
         </div>
     </div>
 </nav>
+<h3 align="center" style="color:red;">${message}</h3>
 
 <h2 class="text-center text-primary mt-4">Feedback Form</h2>
 

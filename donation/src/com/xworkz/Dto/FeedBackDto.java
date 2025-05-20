@@ -1,4 +1,4 @@
-package com.xworkz.servlets;
+package com.xworkz.Dto;
 
 public class FeedBackDto {
     private String name;
@@ -45,8 +45,5 @@ public class FeedBackDto {
                 ", subject='" + subject + '\'' +
                 ", message='" + message + '\'' +
                 '}';
-    }
-
-    public void setname(String name) {
     }
 }

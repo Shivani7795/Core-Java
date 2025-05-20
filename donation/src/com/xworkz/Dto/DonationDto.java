@@ -1,4 +1,4 @@
-package com.xworkz.servlets;
+package com.xworkz.Dto;
 
 public class DonationDto {
     private String name;

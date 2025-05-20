@@ -1,8 +1,8 @@
-package com.xworkz.servlets;
+package com.xworkz.Dto;
 
 public class FIRDto {
-    private String complaintName;
     private String name;
+    private String complaintName;
     private String phone;
     private String address;
     private String incidentDate;

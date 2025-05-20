@@ -35,11 +35,11 @@
     </thead>
     <tbody>
     <tr>
-        <th scope="row">${dto.name}</th>
-        <td>${dto.complaintName}</td>
-        <td>${dto.phone}</td>
-        <td>${dto.address}</td>
-        <td>${dto.incidentDate}</td>
+        <th scope="row">${fIRDto.name}</th>
+        <td>${fIRDto.complaintName}</td>
+        <td>${fIRDto.phone}</td>
+        <td>${fIRDto.address}</td>
+        <td>${fIRDto.incidentDate}</td>
     </tr>
 
 

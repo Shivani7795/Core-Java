@@ -1,5 +1,11 @@
 package com.xworkz.servlets;
 
+import com.xworkz.Dto.FeedBackDto;
+import com.xworkz.service.DService;
+import com.xworkz.service.DonationServiceImplimentation;
+import com.xworkz.service.FeedBackImpli;
+import com.xworkz.service.FeedBackService;
+
 import javax.servlet.*;
         import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -21,15 +27,26 @@ public class FeedBackServlet extends HttpServlet {
         String subject = req.getParameter("subject");
         String message = req.getParameter("message");
 
-        FeedBackDto dto = new FeedBackDto();
-        dto.setName(name);
-        dto.setEmail(email);
-        dto.setSubject(subject);
-        dto.setMessage(message);
+        FeedBackDto feedBackDto = new FeedBackDto();
+        feedBackDto.setName(name);
+        feedBackDto.setEmail(email);
+        feedBackDto.setSubject(subject);
+        feedBackDto.setMessage(message);
 
-        RequestDispatcher requestDispatcher=req.getRequestDispatcher("FeedBackSuccess.jsp");
-        req.setAttribute("dto",dto);
-        requestDispatcher.forward(req,resp);
+        FeedBackService feedBackService = new FeedBackImpli();
+        boolean saved= feedBackService.save(feedBackDto);
+        if(saved) {
+            RequestDispatcher dispatcher = req.getRequestDispatcher("donationSuccess.jsp");
+            req.setAttribute("message", "Save Success");
+            req.setAttribute("feedBackDto", feedBackDto);
+            dispatcher.forward(req,resp);
+        }
+        else{
+            RequestDispatcher dispatcher =
+                    req.getRequestDispatcher("donation.jsp");
+            req.setAttribute("message", "Saving of Donation Failed");
+            dispatcher.forward(req,resp);
+        }
     }
 }
 

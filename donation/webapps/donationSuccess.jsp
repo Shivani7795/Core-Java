@@ -9,14 +9,14 @@
 
 <nav class="navbar navbar-expand-lg" style="background-color: #90caf9;">
     <div class="container-fluid">
-        <a class="navbar-brand text-dark" href="index.html">Donation </a>
+        <a class="navbar-brand text-dark" href="index.jsp">Donation </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="index.html">Home</a>
+                    <a class="nav-link text-dark" href="index.jsp">Home</a>
                 </li>
             </ul>
         </div>
@@ -34,10 +34,10 @@
     </thead>
     <tbody>
     <tr>
-        <th scope="row">${dto.name}</th>
-        <td>${dto.email}</td>
-        <td>${dto.amount}</td>
-        <td>${dto.cause}</td>
+        <th scope="row">${donationDto.name}</th>
+        <td>${donationDto.email}</td>
+        <td>${donationDto.amount}</td>
+        <td>${donationDto.cause}</td>
     </tr>
 
 

@@ -1,5 +1,9 @@
 package com.xworkz.servlets;
 
+import com.xworkz.Dto.FIRDto;
+import com.xworkz.service.FirServiceImpli;
+import com.xworkz.service.FIRService;
+
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -7,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = "/fir")
+@WebServlet(urlPatterns = "/FIR")
 public class FIRServlet extends HttpServlet {
     public FIRServlet()
     {
@@ -24,16 +28,28 @@ public class FIRServlet extends HttpServlet {
         String address = req.getParameter("address");
         String incidentDate = req.getParameter("incidentDate");
 
-        FIRDto dto = new FIRDto();
-        dto.setName(name);
-        dto.setComplaintName(complainantName);
-        dto.setPhone(phone);
-        dto.setAddress(address);
-        dto.setIncidentDate(incidentDate);
+        FIRDto fIRDto = new FIRDto();
+        fIRDto.setName(name);
+        fIRDto.setComplaintName(complainantName);
+        fIRDto.setPhone(phone);
+        fIRDto.setAddress(address);
+        fIRDto.setIncidentDate(incidentDate);
 
-        RequestDispatcher requestDispatcher=req.getRequestDispatcher("FIRSuccess.jsp");
-        req.setAttribute("dto",dto);
-        requestDispatcher.forward(req,resp);
+        FIRService FIRService = new FirServiceImpli();
+        boolean saved= FIRService.save(fIRDto);
+        if(saved) {
+            RequestDispatcher dispatcher =
+                    req.getRequestDispatcher("FIRSuccess.jsp");
+            req.setAttribute("message", "Save Success");
+            req.setAttribute("fIRDto", fIRDto);
+            dispatcher.forward(req,resp);
+        }
+        else{
+            RequestDispatcher dispatcher =
+                    req.getRequestDispatcher("FIR.jsp");
+            req.setAttribute("message", "Saving of FIR Failed");
+            dispatcher.forward(req,resp);
+        }
     }
 }
 
