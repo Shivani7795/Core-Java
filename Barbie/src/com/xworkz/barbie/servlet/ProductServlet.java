@@ -1,6 +1,8 @@
 package com.xworkz.barbie.servlet;
 
 import com.xworkz.barbie.dto.ProductDto;
+import com.xworkz.barbie.repository.ProductRepository;
+import com.xworkz.barbie.repository.ProductRepositoryImpl;
 import com.xworkz.barbie.service.ProductImplementation;
 import com.xworkz.barbie.service.ProductService;
 
@@ -14,10 +16,17 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = "/product")
     public class ProductServlet extends HttpServlet {
-
+    private ProductService productService;
         public ProductServlet() {
             System.out.println("ProductServlet Constructor");
         }
+
+    @Override
+    public void init() {
+        System.out.println("init method in product servlet");
+        ProductRepository productRepository = new ProductRepositoryImpl();
+        this.productService = new ProductImplementation();
+    }
 
         @Override
         protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException, ServletException, IOException {

@@ -57,7 +57,7 @@
         <td>${productDto.manufDate}</td>
         <td>${productDto.warranty}</td>
         <td>${productDto.returnPolicy}</td>
-        <td>${productDto.sellingPrice}</td>
+
     </tr>
 
 
