@@ -28,8 +28,8 @@
     <div class="card card-custom p-4 mx-auto" style="max-width: 600px;">
         <form action="Red" method="post">
             <div class="mb-3">
-                <label for="firstName" class="form-label">Event:</label>
-                <input type="text" class="form-control" id="firstName" name="name" placeholder="Enter the Event Name" required>
+                <label for="event" class="form-label">Event:</label>
+                <input type="text" class="form-control" id="event" name="event" placeholder="Enter the Event Name" required>
             </div>
             <div class="mb-3">
                 <label for="deaths" class="form-label">Deaths:</label>

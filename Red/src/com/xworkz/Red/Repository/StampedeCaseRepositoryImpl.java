@@ -16,8 +16,7 @@ public class StampedeCaseRepositoryImpl implements StampedeCaseRepository{
             try {
                 Class.forName(JDBCConnection.driverName);
                 Connection connection = DriverManager.getConnection(JDBCConnection.url, JDBCConnection.userName, JDBCConnection.password);
-                String query = "insert into stampede_case values" +
-                        "(0,'"+ stampedeCaseDto.getEvent() +"'," + stampedeCaseDto.getDeaths() + "," + stampedeCaseDto.getInjuries() + ",'" + stampedeCaseDto.getLocation() + "')";
+                String query = "insert into new_table values(0,'"+ stampedeCaseDto.getEvent() +"'," + stampedeCaseDto.getDeaths() + "," + stampedeCaseDto.getInjuries() + ",'" + stampedeCaseDto.getLocation() + "')";
                 Statement statement = connection.createStatement();
                 statement.executeUpdate(query);
             } catch (ClassNotFoundException | SQLException e) {
