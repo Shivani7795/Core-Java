@@ -49,13 +49,23 @@
 
             <div class="mb-3">
                 <label for="cloudy" class="form-label">Cloudy:</label>
-                <input type="text" class="form-control" id="cloudy" name="cloudy" placeholder="Yes/No" required>
+                <select class="form-control" id="cloudy" name="cloudy" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
             </div>
+
 
             <div class="mb-3">
                 <label for="raining" class="form-label">Raining:</label>
-                <input type="text" class="form-control" id="raining" name="raining" placeholder="Yes/No" required>
+                <select class="form-control" id="raining" name="raining" required>
+                    <option value="" disabled selected>Select an option</option>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
             </div>
+
 
             <div class="mb-3">
                 <label for="rainMm" class="form-label">Rain in mm:</label>
