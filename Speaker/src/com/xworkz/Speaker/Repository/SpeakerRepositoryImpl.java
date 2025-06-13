@@ -36,8 +36,9 @@ public class SpeakerRepositoryImpl implements SpeakerRepository {
             String query = "INSERT INTO speaker_table VALUES (" +
                     "0, '" + speakerDto.getBrand() + "', '" + speakerDto.getSpeakerType() + "', " +
                     speakerDto.getPrice() + ", " + speakerDto.getWirelessRange() + ", '" +
-                    speakerDto.getColor() + "', '" + speakerDto.getBluetooth() + "' '" +
+                    speakerDto.getColor() + "', '" + speakerDto.getBluetooth() + "', '" +
                     localDate + "')";
+
 
             int rows = statement.executeUpdate(query);
 
