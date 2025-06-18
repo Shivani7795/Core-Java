@@ -1,15 +1,18 @@
 package com.xworkz.Speaker.Utils;
 
+import lombok.Getter;
+
 public class JdbcConnection {
-    private JdbcConnection() {
+    private JdbcConnection()
+    {
+        System.out.println("Jdbc connection constructor");
     }
-    public static final String userName="root";
-    public static final String url="jdbc:mysql://localhost:3306/Weather";
-    public static final String password="Shivani@1234";
-    public static final String driverName="com.mysql.cj.jdbc.Driver";
+import lombok.Getter;
+
+    @Getter
+    public enum JdbcConnection {
+    UserName("root"),
+    Url("jdbc:mysql://localhost:3306/Weather")
+    Password("Shivani@1234")
+    DriverName("com.mysql.cj.jdbc.Driver");
 }
-
-
-
-
-

@@ -3,11 +3,9 @@ package com.xworkz.Speaker.Repository;
 import com.xworkz.Speaker.Dto.SpeakerDto;
 import com.xworkz.Speaker.Utils.JdbcConnection;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.time.LocalDate;
+import java.util.Optional;
 
 public class SpeakerRepositoryImpl implements SpeakerRepository {
     public SpeakerRepositoryImpl() {
@@ -55,6 +53,51 @@ public class SpeakerRepositoryImpl implements SpeakerRepository {
 
         System.out.println("Speaker details not saved in DB");
         return "failed";
+
+        @Override
+        public Optional<SpeakerDto> findByBrandAndType(String brand, String speakerType) {
+            System.out.println("findByBrandAndType in SpeakerRepositoryImpl");
+
+            try {
+                Class.forName(JdbcConnection.DriverName.getProperty());
+                Connection connection = DriverManager.getConnection(
+                        JdbcConnection.Url.getProperty(),
+                        JdbcConnection.UserName.getProperty(),
+                        JdbcConnection.Password.getProperty()
+                );
+
+                Statement statement = connection.createStatement();
+
+                String query = "SELECT * FROM speaker_table WHERE brand='" + brand + "' AND speaker_type='" + speakerType + "'";
+
+                ResultSet resultSet = statement.executeQuery(query);
+
+                while (resultSet.next()) {
+                    double price = resultSet.getDouble("price");
+                    double wirelessRange = resultSet.getDouble("wireless_range");
+                    String color = resultSet.getString("color");
+                    String bluetooth = resultSet.getString("bluetooth");
+                    LocalDate manufactureDate = resultSet.getDate("ManufactureDate").toLocalDate();
+
+                    SpeakerDto dto = new SpeakerDto(
+                            brand,
+                            speakerType,
+                            price,
+                            wirelessRange,
+                            color,
+                            bluetooth,
+                            manufactureDate
+                    );
+                    return Optional.of(dto);
+                }
+
+            } catch (ClassNotFoundException | SQLException e) {
+                System.out.println("Error fetching data: " + e.getMessage());
+            }
+
+            return Optional.empty();
+        }
+    }
     }
 
 }
