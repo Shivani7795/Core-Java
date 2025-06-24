@@ -18,7 +18,6 @@ public class SareeDTO {
         System.out.println("SareeDTO created with all values");
     }
 
-
     public String getOccasionType() {
         return occasionType;
     }
@@ -33,7 +32,8 @@ public class SareeDTO {
 
     public double getPrice() {
         return price;
-    } public void details() {
+    }
+    public void details() {
         System.out.println("Saree Details:");
         System.out.println("Occasion Type: " + occasionType);
         System.out.println("Color: " + color);
