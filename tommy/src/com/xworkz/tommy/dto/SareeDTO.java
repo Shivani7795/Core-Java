@@ -15,7 +15,7 @@ public class SareeDTO {
         this.color = color;
         this.price = price;
         this.material = material;
-        System.out.println("SareeDTO created with all values");
+
     }
 
     public String getOccasionType() {
