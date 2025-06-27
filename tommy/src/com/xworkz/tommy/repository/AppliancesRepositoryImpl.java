@@ -36,6 +36,7 @@ public class AppliancesRepositoryImpl implements AppliancesRepository{
     }
     public void warranty(Collection<AppliancesDTO>collection){
         System.out.println("for each loop");
+        System.out.println("Total number of appliances: " + collection.size());
         for(AppliancesDTO appliancesDTO:collection){
             if(appliancesDTO.getWarranty()==2){
                 System.out.println("Appliances having 2 years warranty are:" + appliancesDTO.getName());
@@ -44,14 +45,17 @@ public class AppliancesRepositoryImpl implements AppliancesRepository{
     }
     public void price(Collection<AppliancesDTO>collection){
         System.out.println("iterator in the loop");
-        System.out.println("appliances below 20000 are:");
-        Iterator<AppliancesDTO>price=collection.iterator();
+        System.out.println("collection before remove:"+collection.size());
+        System.out.println("appliances below 3600 are:");
+        Iterator<AppliancesDTO> price=collection.iterator();
         while(price.hasNext()){
             AppliancesDTO appliancesDTO=price.next();
-            if(appliancesDTO.getPrice()<20000){
+            if(appliancesDTO.getPrice()<3600){
                 System.out.println(appliancesDTO.getName());
+                price.remove();
             }
         }
+        System.out.println("collection after remove:"+collection.size());
     }
 }
 
