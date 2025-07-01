@@ -14,5 +14,16 @@ public class TreeSetExample {
         for (String c : country) {
             System.out.println(c);
         }
+        //13. Create a TreeSet and add integers in random order.
+        // Print them to show sorted order.
+        TreeSet<Integer> randomsort = new TreeSet<>();
+        randomsort.add(384);
+        randomsort.add(734);
+        randomsort.add(247);
+        randomsort.add(754);
+        randomsort.add(536);
+        System.out.println("sorted order is:" + randomsort);
+
+
     }
 }

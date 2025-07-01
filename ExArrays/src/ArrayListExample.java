@@ -76,5 +76,30 @@ public class ArrayListExample {
         for (Integer ind : ins) {
             System.out.println(ind);
         }
+        //Given a List, find the size of the list.
+        ArrayList<Integer> sinum = new ArrayList<>();
+        sinum.add(1);
+        sinum.add(2);
+        sinum.add(3);
+        sinum.add(4);
+        sinum.add(5);
+        int sizesinum = sinum.size();
+        System.out.println("the size of the integers is:" + sizesinum);
+
+        Collection<Integer> collection1=new ArrayList<>();
+        Collection<Integer> collection2=new ArrayList<>();
+        collection1.add(51);
+        collection1.add(41);
+        collection1.add(61);
+        collection1.add(71);
+        collection1.add(31);
+        System.out.println("the integers greater than 50 are:");
+        for(Integer integer:collection1) {
+            if (integer > 50) {
+                System.out.println(integer);
+                collection2.add(integer);
+            }
+        }
+        System.out.println("the integers in collection2 are:" + collection2);
     }
 }

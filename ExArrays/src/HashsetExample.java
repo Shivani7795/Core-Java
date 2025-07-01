@@ -30,6 +30,16 @@ public class HashsetExample {
         }else {
             System.out.println("the given Hashset is not empty");
         }
+        //12. Create a HashSet. Add numbers 2, 4, 6, 8. Remove the number 6.
+        HashSet<Integer> addNum=new HashSet<>();
+        addNum.add(2);
+        addNum.add(4);
+        addNum.add(6);
+        addNum.add(8);
+        System.out.println("the numbers before removing 6:"+addNum);
+        addNum.remove(6);
+        System.out.println("the numbers after removing 6 :" + addNum);
+
 
     }
 }
