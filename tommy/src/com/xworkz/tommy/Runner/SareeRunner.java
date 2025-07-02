@@ -13,5 +13,7 @@ public class SareeRunner {
         Collection<SareeDTO> collection=sareeRepositoryimpl.findAllSaree();
         sareeRepositoryimpl.findAll(collection);
         sareeRepositoryimpl.findAllprice(collection);
+
+        collection.stream().sorted().forEach(System.out::println);
     }
 }

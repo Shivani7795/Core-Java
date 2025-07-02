@@ -1,7 +1,9 @@
 package com.xworkz.tommy.dto;
 
+import lombok.ToString;
 
-public class SareeDTO {
+@ToString
+public class SareeDTO implements Comparable<SareeDTO>{
     public SareeDTO() {
         System.out.println("constructor in SareeDTO");
     }
@@ -39,5 +41,18 @@ public class SareeDTO {
         System.out.println("Color: " + color);
         System.out.println("Price: " + price);
         System.out.println("Material: " + material);
+
+    }
+
+    @Override
+    public int compareTo(SareeDTO o) {
+        SareeDTO leftSide = this;
+        SareeDTO rightSide=o;
+        if(leftSide.price>rightSide.price){
+            return 99;
+        }else if(leftSide.price==rightSide.price){
+            return 0;
+        }
+        return -99;
     }
 }
