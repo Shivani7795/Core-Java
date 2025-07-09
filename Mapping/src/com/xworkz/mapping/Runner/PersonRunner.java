@@ -11,8 +11,8 @@ public class PersonRunner {
 
         Map<PersonDto, AddressDto> map = new HashMap<>();
 
-        PersonDto personDto1 = new PersonDto("Akash", "akash82@gmail.com", "6239 8923 9264");
-        AddressDto addressDto1 = new AddressDto(89, "Kattuputhur", "Trichy", 621207);
+        PersonDto personDto1 = new PersonDto("aditi", "aditi@gmail.com", "4745 8923 9264");
+        AddressDto addressDto1 = new AddressDto(89, "hubli", "dharwad", 654547);
         map.put(personDto1, addressDto1);
 
         map.keySet().forEach(e -> System.out.println("PersonDetails: " + e));
