@@ -50,13 +50,14 @@ public class Runner {
                 .forEach(System.out::println);
 
         System.out.println("------------------------------------");
-        System.out.println("Sort by education: qualification");
+        System.out.println("Sort by education qualification");
         customers.stream().sorted(Comparator.comparing(e->e.getPassport().getCountry().getPresident().getDriver().getVehicle().getCompany().getCeo().getHouse().getSecurity().getJob().getDetail().getEducation().getQualification()))
                 .forEach(System.out::println);
 
         System.out.println("------------------------------------");
-        System.out.println("7. Collect all unique Country");
+        System.out.println("Collect all unique Country");
         Set<CountryDto> set = customers.stream().map(w->w.getPassport().getCountry()).collect(Collectors.toSet());
         set.forEach(System.out::println);
+
     }
 }
