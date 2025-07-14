@@ -31,7 +31,7 @@ public class Runner {
         Set<CustomerDto> customers = customerRepository.findCustomer();
 
 
-        System.out.println("Sort by Company name in desc:");
+        System.out.println("Sort by Company name in desc order");
         customers.stream()
                 .sorted(Comparator.comparing(
                         c -> c.getPassport().getCountry().getPresident().getDriver().getVehicle().getCompany().getName(), Comparator.reverseOrder()))
