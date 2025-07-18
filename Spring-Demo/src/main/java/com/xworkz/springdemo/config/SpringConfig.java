@@ -556,7 +556,7 @@ public class SpringConfig {
     @Bean
     public ArrayList<String> arrayListOfNames5() {
         System.out.println("Creating ArrayList of Names 5");
-        return new ArrayList<>(Arrays.asList("Arjun", "Tina", "Harsh", "Rekha"));
+        return new ArrayList<>(Arrays.asList("Arjun", "Tina", "Harsh", "Rekha","Anjali"));
     }
 
 }
